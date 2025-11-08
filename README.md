@@ -6,6 +6,15 @@ It accompanies the paper:
 > **Cross-lingual Transfer Dynamics in BLOOMZ: Insights into Multilingual Generalization**  
 > *Sabyasachi Samantaray and Preethi Jyothi, MRL 2025, EMNLP (ACL Anthology: [2025.mrl-main.4](https://aclanthology.org/2025.mrl-main.4/))*
 
+## 🧭 About
+The core idea is to analyze how multilingual models (like BLOOMZ) adapt to cross lingual transfer after instruction tuning. We do this using multilingual logit lens probing  across decoder layers. Using logit lens, the project aimed to uncover whether multilingual alignment is uniform across languages or influenced by certain triggers.
+
+Key insights from the paper
+- Latent suppression of interfering languages in instruction-tuned models improves performance in the target language. For example, fine-tuning on just 103 Russian machine-translated samples more than doubles Odia XQuAD performance. 
+- Self-instruction tuning often degrades performance due to overgeneration, except for extremely low-resource languages like Odia. For short-span QA tasks, self-instruction leads to unnecessary verbose outputs.
+- Instruction tuning in high-resource languages is not always beneficial for non-English-centric multilingual models.
+- Higher data quality in training datasets leads to better cross-lingual transfer and downstream performance.
+
 ---
 
 ## 📂 Repository Structure
